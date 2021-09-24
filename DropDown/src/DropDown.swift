@@ -765,20 +765,19 @@ extension DropDown {
 		if templateCell == nil {
 			templateCell = (cellNib.instantiate(withOwner: nil, options: nil)[0] as! DropDownCell)
 		}
+//		var maxWidth: CGFloat = 0
 		
-		var maxWidth: CGFloat = 0
-		
-		for index in 0..<dataSource.count {
-			configureCell(templateCell, at: index)
-			templateCell.bounds.size.height = cellHeight
-			let width = templateCell.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).width
-			
-			if width > maxWidth {
-				maxWidth = width
-			}
-		}
-		
-		return maxWidth
+//		for index in 0..<dataSource.count {
+//			configureCell(templateCell, at: index)
+//			templateCell.bounds.size.height = cellHeight
+//			let width = templateCell.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).width
+//
+//			if width > maxWidth {
+//				maxWidth = width
+//			}
+//		}
+//		return maxWidth
+        	return 0
 	}
 	
 	fileprivate func constraintWidthToBoundsIfNecessary(layout: inout ComputeLayoutTuple, in window: UIWindow) {
